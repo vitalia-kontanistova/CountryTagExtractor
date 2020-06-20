@@ -5,7 +5,7 @@ namespace CountryTagExtractor
 {
     class Country
     {
-        public string Name { get; set; }
+        public string[] Name { get; set; }
         public string[] Cities { get; set; }
 
         public Dictionary<string, int> CitiesMentions { get; } = new Dictionary<string, int>();
@@ -13,7 +13,7 @@ namespace CountryTagExtractor
 
         public int Coefficient { get; set; } = 0;
 
-        public Country(string name, string[] cities)
+        public Country(string[] name, string[] cities)
         {
             Name = name;
             Cities = cities;
@@ -25,9 +25,6 @@ namespace CountryTagExtractor
                 Coefficient += number;
             foreach (int number in CountryMentions.Values)
                 Coefficient += number;
-
-            //if (CountryMentions.Count > 0)
-            //    Coefficient += CountryMentions[Name];
         }
     }
 }
