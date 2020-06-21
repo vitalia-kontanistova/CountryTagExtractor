@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
-using System.Threading.Tasks;
-using AngleSharp;
+using LingvoNET;
 
 namespace CountryTagExtractor
 {
